@@ -1,0 +1,156 @@
+/* Estilos da página index.html */
+body{
+    background-color: #FCF7F8;
+}
+p {
+    color: #191516;
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F28482;
+    font-size: 60px;
+}
+
+h2{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FF9B54;
+}
+
+a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Margin = espaço para fora, Padding = Espaço para dentro */
+.paragrafo {
+    background-color: #CC76A1;
+    display: flex;
+    padding: 50px;
+    margin: 30px;
+    border-radius: 2em;
+}
+
+.justify{
+    text-align: justify;
+}
+
+.foto{
+    width: 350px;
+    aspect-ratio: 1; /* Sempre deixar em 1 para não quebrar em diferentes telas */
+    border: 3px solid #FF9B54;
+    border-radius: 50%; /* Arredondamento da borda */
+    padding: 4px; /* Descola um pouco a imagem da borda */
+    display: block;
+    margin: 30px;
+
+}
+
+#video{
+    width: 70vw; /* Porcentagem é sempre relativa a quem está antes dele, uma div, por exemplo. O vw é com relação a tela*/
+    aspect-ratio: 16/9;
+    margin: 0 auto;
+    display: block; /* Centraliza e bloqueia no meio da tela */
+}
+
+.container{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu li{
+    display: inline;
+    padding: 10px;
+}
+
+#menu li a{
+    text-decoration: none;
+    color: #62929E;
+    font-weight: bold;
+}
+
+#menu li a:hover{
+    color: grey;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.tm-social{
+    width: 50px;
+    padding: 10px;
+}
+
+.mb-50{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
+
+
+/* Estilos da página contato.html */
+
+.formulario{
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form li + li{
+    margin-top: 1em;
+}
+
+label{
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input, textarea{
+    font-family: 1em Arial, Helvetica, sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+input:focus, textarea:focus{
+    border: #000;
+    border-radius: 2em;
+}
+
+textarea{
+    vertical-align: top;
+    height: 5em;
+}
+
+.button{
+    padding-left: 90px;
+
+}
+
+button{
+    margin-left: 0.5em;
+    border-radius: 2em;
+    border: 1em;
+    background-color: #FF9B54;
+}
+
+.mapa{
+    margin: 0 auto;
+}
