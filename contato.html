@@ -10,30 +10,25 @@
 </head>
 
 <body>
-    <ul id="menu" style="margin-top: 30px;">
-        <li>
-            <a href="index.html">Home</a>
-        </li>
-        <li>
-            <a href="contato.html">Contato</a>
-        </li>
-        <li>
-            <a href="portfolio.html">Portfólio</a>
-        </li>
-        <li>
-            <a href="https://github.com/nathaliebfm" target="_blank"> Github</a>
-        </li>
-        <li>
-            <a href="https://www.linkedin.com/in/nathalie-brasil/" target="_blank">LinkedIn</a>
-        </li>
-
-    </ul>
+    <nav>
+        <ul >
+            <li>
+                <a href="index.html" class="underline">Home </a>
+            </li>
+            <li>
+                <a href="contato.html" class="underline">Contato</a>
+            </li>
+            <li>
+                <a href="portfolio.html" class="underline">Portfólio</a>
+            </li>
+        </ul>
+    </nav>
 
     <h1>
         Entre em contato comigo
     </h1>
 
-    <div class="container mb-50">
+    <div class="container">
 
         <div class="formulario">
             <form>
@@ -41,18 +36,22 @@
                 <ul>
                     <li>
                         <label for="name">Nome:</label>
-                        <input type="text" id="text" name="user_name" />
+                        <input type="text" id="nome" onkeyup="validaNome()" name="user_name" />
+                        <div id="txtNome"></div>
                     </li>
                     <li>
                         <label for="mail">E-mail:</label>
-                        <input type="email" id="mail" name="user_email" />
+                        <input type="email" id="mail" onkeyup= "validaEmail()" name="user_email" />
+                        <div id="txtEmail"></div>
                     </li>
                     <li>
-                        <label for="msg">Mensagem:</label>
-                        <textarea id="msg" name="user_message"></textarea>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" onkeyup="validaMensagem()" name="user_message" cols="60" rows="5"></textarea>
+                        <div id="txtMensagem"></div>
                     </li>
+                    <br>
                     <li class="button">
-                        <button type="submit">Enviar</button>
+                        <button onclick="enviar()">Enviar</button>
                     </li>
                 </ul>
 
@@ -65,7 +64,7 @@
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.839238615717!2d-46.53894387163438!3d-23.64592764270755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce43d9873730d1%3A0xa05ba057a191137c!2sNathalie%20Brasil%20Advogada%20%7C%20C%C3%ADvel%20e%20Empresarial!5e0!3m2!1spt-BR!2sbr!4v1666632170080!5m2!1spt-BR!2sbr"
                 width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                referrerpolicy="no-referrer-when-downgrade" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa"></iframe>
 
             <p>Avenida Industrial, 780, Sala 1911</p>
             <p>Santo André - SP</p>
@@ -93,6 +92,8 @@
         </p>
     </footer>
 
+
+    <script src="./assets/scripts/script.js"></script>
 </body>
 
 </html>

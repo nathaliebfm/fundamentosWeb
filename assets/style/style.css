@@ -5,7 +5,7 @@ body{
 p {
     color: #191516;
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -14,7 +14,7 @@ h1{
     margin-top: 50px;
     font-family: Arial, Helvetica, sans-serif;
     color: #F28482;
-    font-size: 60px;
+    font-size: 4rem;
 }
 
 h2{
@@ -51,6 +51,10 @@ a{
 
 }
 
+.menina{
+    margin-left: 1000px;
+}
+
 #video{
     width: 70vw; /* Porcentagem é sempre relativa a quem está antes dele, uma div, por exemplo. O vw é com relação a tela*/
     aspect-ratio: 16/9;
@@ -63,24 +67,69 @@ a{
     flex-flow: row;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
-#menu li{
-    display: inline;
-    padding: 10px;
-}
+nav {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-#menu li a{
-    text-decoration: none;
+  nav p {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #CC76A1;
+    margin-left: 2rem;
+  }
+
+  nav p span {
     color: #62929E;
-    font-weight: bold;
-}
+  }
 
-#menu li a:hover{
-    color: grey;
-    font-size: 20px;
-    font-weight: lighter;
-}
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    padding: 1rem;
+    justify-content: flex-end;
+  }
+
+  nav a {
+    color: #62929E;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 800;
+    transition: color 0.5s;
+  }
+
+  /* efeitinho do menu, da barrinha indo da esquerda pra direita */
+.underline {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+  }
+  .underline:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    width: 0;
+    bottom: -5px;
+    background: #CC76A1;
+    height: 2px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  .underline:hover:after,
+  .underline:focus:after,
+  .underline:active:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 
 .tm-social{
     width: 50px;
@@ -125,13 +174,13 @@ label{
 input, textarea{
     font-family: 1em Arial, Helvetica, sans-serif;
     width: 300px;
-    box-sizing: border-box;
+    box-sizing: unset;
     border: 1px solid #999;
+
 }
 
 input:focus, textarea:focus{
     border: #000;
-    border-radius: 2em;
 }
 
 textarea{
